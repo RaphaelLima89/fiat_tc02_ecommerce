@@ -1,0 +1,45 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.eggs/
+build/
+dist/
+.venv/
+venv/
+
+# Ambiente
+.env
+.env.*
+!.env.example
+
+# DVC (dados ficam versionados pelo DVC, não pelo git)
+/data/raw/*
+/data/processed/*
+!/data/raw/.gitkeep
+!/data/processed/.gitkeep
+.dvc/cache
+.dvc/tmp
+
+# MLflow
+mlruns/
+mlflow.db
+
+# Modelos (artefatos grandes vão pro Registry/DVC, não pro git)
+/models/*
+!/models/.gitkeep
+
+# Testes / cobertura
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Linters
+.ruff_cache/
+.mypy_cache/
+
+# IDE / SO
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
