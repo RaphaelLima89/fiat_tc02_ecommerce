@@ -1,0 +1,28 @@
+[project]
+name = "e-commerce"
+version = "0.1.0"
+description = "Projeto envolvendo o desenvolvimento de uma rede neural para um e-commerce"
+authors = [
+    {name = "Raphael Lima",email = "raphafl@gmail.com"}
+]
+requires-python = ">=3.12,<3.13"
+dependencies = [
+    "torch (>=2.12.1,<3.0.0)",
+    "scikit-learn (>=1.9.0,<2.0.0)",
+    "mlflow (>=3.14.0,<4.0.0)",
+    "dvc (>=3.67.1,<4.0.0)"
+]
+
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry]
+packages = [{ include = "recsys", from = "src" }]
+[dependency-groups]
+dev = [
+    "pytest (>=9.1.1,<10.0.0)",
+    "ruff (>=0.15.20,<0.16.0)",
+    "pre-commit (>=4.6.0,<5.0.0)"
+]
